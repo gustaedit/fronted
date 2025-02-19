@@ -15,6 +15,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSearch }) => {
   };
 
   return (
+    <>
     <nav className="h-16 bg-green-900 text-white px-6 lg:px-20 flex items-center">
       <div className="w-full grid grid-cols-3 items-center">
         {/* Logo alinhado à esquerda */}
@@ -38,9 +39,9 @@ const NavBar: React.FC<NavBarProps> = ({ onSearch }) => {
           />
         </div>
       </div>
-
+      </nav>
       {/* Menu de Navegação */}
-      <div className="absolute top-16 left-0 w-full bg-green-800 shadow-md py-2 flex justify-center space-x-6">
+      <div className=" top-16 left-0 w-full bg-green-800 shadow-md py-2 flex justify-center space-x-6">
         <Link href="/sobre" className="hover:underline">
           Sobre
         </Link>
@@ -54,7 +55,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSearch }) => {
           🔐 Login
         </Link>
       </div>
-    </nav>
+      </>
   );
 };
 
